@@ -1,0 +1,37 @@
+;Auto-generated Diamond Directive File. Can be deleted without harm.
+.Set CabinetNameTemplate=C:\Users\RedDot-3ND7355\Desktop\Combined\Combined\~ps3mfw.CAB
+.Set CompressionType=LZX
+.Set CompressionLevel=7
+.Set InfFileName=C:\Users\RedDot-3ND7355\Desktop\Combined\Combined\~ps3mfw_LAYOUT.INF
+.Set RptFileName=C:\Users\RedDot-3ND7355\Desktop\Combined\Combined\~ps3mfw.RPT
+.Set MaxDiskSize=CDROM
+.Set ReservePerCabinetSize=6144
+.Set InfCabinetLineFormat=*cab#*=Application Source Media,*cabfile*,0
+.Set Compress=on
+.Set CompressionMemory=21
+.Set DiskDirectoryTemplate=
+.Set Cabinet=ON
+.Set MaxCabinetSize=999999999
+.Set InfDiskHeader=
+.Set InfDiskLineFormat=
+.Set InfCabinetHeader=[SourceDisksNames]
+.Set InfFileHeader=
+.Set InfFileHeader1=[SourceDisksFiles]
+.Set InfFileLineFormat=*file*=*cab#*,,*size*,*csum*
+C:\Users\REDDOT~1\Desktop\Combined\Combined\ps3mfw.exe
+C:\Users\REDDOT~1\Desktop\Combined\Combined\AppMain.tcl
+C:\Users\REDDOT~1\Desktop\Combined\Combined\BUILD_~1.SH
+C:\Users\REDDOT~1\Desktop\Combined\Combined\console.tcl
+C:\Users\REDDOT~1\Desktop\Combined\Combined\db.xml
+C:\Users\REDDOT~1\Desktop\Combined\Combined\ps3mfw
+C:\Users\REDDOT~1\Desktop\Combined\Combined\PS3MFW~1.EXE
+C:\Users\REDDOT~1\Desktop\Combined\Combined\PS3MFW~1.TCL
+C:\Users\REDDOT~1\Desktop\Combined\Combined\PS3MFW~2.TCL
+C:\Users\REDDOT~1\Desktop\Combined\Combined\PS3MFW~3.TCL
+C:\Users\REDDOT~1\Desktop\Combined\Combined\SCROLL~1.TCL
+C:\Users\REDDOT~1\Desktop\Combined\Combined\Settings.xml
+C:\Users\REDDOT~1\Desktop\Combined\Combined\tar.tcl
+C:\Users\REDDOT~1\Desktop\Combined\Combined\TRACED~1.TCL
+C:\Users\REDDOT~1\Desktop\Combined\Combined\UP0001~1.PKG
+C:\Users\REDDOT~1\Desktop\Combined\Combined\version.txt
+C:\Users\REDDOT~1\Desktop\Combined\Combined\xml.tcl
