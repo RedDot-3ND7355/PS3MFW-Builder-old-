@@ -23,6 +23,7 @@ proc ego {} {
 	set PS3MFW_BUILD $versionDL2
     puts "PS3MFW Creator v${::PS3MFW_VERSION}"
 	puts "Private Build $PS3MFW_BUILD"
+	puts "Patch on-the-go Edition!"
 	puts ""
     puts "    Copyright (C) 2013 Project PS3MFW"
     puts "    This program comes with ABSOLUTELY NO WARRANTY;"
@@ -58,6 +59,7 @@ proc ego_gui {} {
 	set PS3MFW_BUILD $versionDL2
     log "PS3MFW Creator v${::PS3MFW_VERSION}"
 	log "Private Build $PS3MFW_BUILD"
+	log "Patch on-the-go Edition!"
 	log ""
     log "    Copyright (C) 2013 Project PS3MFW"
     log "    This program comes with ABSOLUTELY NO WARRANTY;"

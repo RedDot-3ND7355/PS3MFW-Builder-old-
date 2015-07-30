@@ -15,112 +15,70 @@
 # Description: [4.xx] Patch lv2!
 
 # Option --label: How to use: If you enable peek and poke plz dont enable toolboy's or extra's!
-# Option --patch-lv2-features: [4.4x] Patch lv2 for peek&poke Access!
-# Option --patch-lv2-features-450: [4.50] Patch lv2 for peek&poke Access!
-# Option --patch-lv2-features-453: [4.53] Patch lv2 for peek&poke Access!
-# Option --patch-lv2-features-455: [4.55] Patch lv2 for peek&poke Access!
-# Option --patch-lv2-features-460: [4.60] Patch completely lv2!
+# Option --patch-lv2-features: [4.xx] Patch lv2 for peek&poke Access!
 # Option --patch-lv2-POC-450: [4.50] Patch lv2 for POC by Habib + Few Misc Patches! (Fan Control[pkg is in mfw folder])
 # Option --label2: Other: If this option turn off the lv2 peek&poke!
 # Option --patch-other: [4.xx] Patch lv2 using toolboy's patterns!
 # Option --label3: Extra: If this option turn off the toolboy's!
-# Option --patch-lv2-Hermes-450: [4.50] Patch lv2 to implement Hermes payload!
-# Option --patch-lv2-Hermes-453: [4.53] Patch lv2 to implement Hermes payload!
-# Option --patch-lv2-Hermes-455: [4.55] Patch lv2 to implement Hermes payload!
-# Option --patch-lv2-syscall-45x: [4.5x] Patch lv2 to allow Syscall36 by Rogero!
-# Option --patch-lv2-syscall-455: [4.55] Patch lv2 to allow Syscall36 Updated!
-# Option --patch-lv2-unknown-45x: [4.5x] Patch lv2 for QA Flag by Rogero!
-# Option --patch-lv2-unknown2-453: [4.53] Patching LV2 for Rogero 4.53 style MFW -- 4.53 HABIB patterns!!
-# Option --patch-lv2-unknown2-455: [4.55] Patching LV2 for Rogero 4.55 style MFW -- Updated pattern!
-# Option --patch-lv2-sigcheck-450: [4.50] Patching/Disable NPDRM ECDSA signature check!
-# Option --patch-lv2-sigcheck-453: [4.53-4.55] Patching/Disable NPDRM ECDSA signature check [JailBait] -- 4.53 HABIB Updated patterns!!
+# Option --patch-lv2-Hermes: [4.5x] Patch lv2 to implement Hermes payload!
+# Option --patch-lv2-syscall: [4.5x] Patch lv2 to allow Syscall36 by Rogero!
+# Option --patch-lv2-unknown: [4.5x] Patch lv2 Rogero style!
+# Option --patch-lv2-sigcheck: [4.5x] Patching/Disable NPDRM ECDSA signature check!
 # Option --label4: Extra: lv2 signature checks [UNTESTED]
-# Option --patch-lv2krn-features421-441: [4.21 to 4.41] Patch sigcheck by Kakaroto!
-# Option --patch-lv2krn-features446-45x: [4.46 to 4.53] Patch sigcheck by Kakaroto!
+# Option --patch-lv2krn-features: [4.xx] Patch sigcheck by Kakaroto!
 # Option --label5: Bonus: Fan Mod Utilities
 # Option --patch-lv2sysc-features-4501: [4.50] Patch lv2 to activate TEMP reading!
 # Option --patch-lv2sysc-features-4502: [4.50] Patch lv2 to activate "GET FAN Policy" !
 # Option --patch-lv2sysc-features-4503: [4.50] Patch lv2 to activate "SET FAN Policy" !
 # Option --patch-lv2sysc-features-4504: [4.50] Patch lv2 to activate "LEDS" !
 # Option --label6: Advanced Patches [All Files are in the mfw dir]
-# Option --patch-lv2-IPF-Toolbox-450: [4.50] Patch lv2 -- IPF Toolbox - [Sysc8] Rogero 4.50 Patterns!
-# Option --patch-lv2-IPF-Toolbox-453: [4.53] Patch lv2 -- IPF MM stealth Toolbox - [Sysc8]
-# Option --patch-lv2-IPF-Toolbox-455: [4.55] Patch lv2 -- IPF MM stealth Toolbox - [Sysc8]
-# Option --patch-lv2-cobra-446: [4.46] Patch lv2 for Cobra Featured MFW! [DESELECT ALL Other LV2 Tasks]
-# Option --patch-lv2-cobra-453: [4.53 v1.04] Patch lv2 for Cobra Featured MFW! [DESELECT ALL Other LV2 Tasks]
+# Option --patch-lv2-IPF-Toolbox: [4.5x] Patch lv2 -- IPF MM Steakth Toolbox - [Sysc8]
+# Option --patch-lv2-cobra: [4.46&4.53] Patch lv2 for Cobra Featured MFW! [DESELECT ALL Other LV2 Tasks]
 
 # Type --label: label
 # Type --patch-lv2-features: boolean
-# Type --patch-lv2-features-450: boolean
-# Type --patch-lv2-features-453: boolean
-# Type --patch-lv2-features-455: boolean
-# Type --patch-lv2-features-460: boolean
 # Type --patch-lv2-POC-450: boolean
 # Type --label2: label
 # Type --patch-other: boolean
 # Type --label3: label
-# Type --patch-lv2-Hermes-450: boolean
-# Type --patch-lv2-Hermes-453: boolean
-# Type --patch-lv2-Hermes-455: boolean
-# Type --patch-lv2-syscall-45x: boolean
-# Type --patch-lv2-syscall-455: boolean
-# Type --patch-lv2-unknown-45x: boolean
-# Type --patch-lv2-unknown2-453: boolean
-# Type --patch-lv2-unknown2-455: boolean
-# Type --patch-lv2-sigcheck-450: boolean
-# Type --patch-lv2-sigcheck-453: boolean
+# Type --patch-lv2-Hermes: boolean
+# Type --patch-lv2-syscall: boolean
+# Type --patch-lv2-unknown: boolean
+# Type --patch-lv2-sigcheck: boolean
 # Type --label4: label
-# Type --patch-lv2krn-features421-441: boolean
-# Type --patch-lv2krn-features446-45x: boolean
+# Type --patch-lv2krn-features: boolean
 # Type --label5: label
 # Type --patch-lv2sysc-features-4501: boolean
 # Type --patch-lv2sysc-features-4502: boolean
 # Type --patch-lv2sysc-features-4503: boolean
 # Type --patch-lv2sysc-features-4504: boolean
 # Type --label6: label
-# Type --patch-lv2-IPF-Toolbox-450: boolean
-# Type --patch-lv2-IPF-Toolbox-453: boolean
-# Type --patch-lv2-IPF-Toolbox-455: boolean
-# Type --patch-lv2-cobra-446: boolean
-# Type --patch-lv2-cobra-453: boolean
+# Type --patch-lv2-IPF-Toolbox: boolean
+# Type --patch-lv2-cobra: boolean
 
 namespace eval ::patch_lv2 {
 
     array set ::patch_lv2::options {
 	    --label ""
-		--patch-lv2-features false
-		--patch-lv2-features-450 false
-		--patch-lv2-features-453 false
-		--patch-lv2-features-455 false
-		--patch-lv2-features-460 true
+		--patch-lv2-features true
 		--patch-lv2-POC-450 false
 		--label2 ""
 		--patch-other false
 		--label3 ""
-		--patch-lv2-Hermes-450 false
-		--patch-lv2-Hermes-453 false
-		--patch-lv2-Hermes-455 false
-		--patch-lv2-syscall-45x false
-		--patch-lv2-syscall-455 false
-		--patch-lv2-unknown-45x false
-		--patch-lv2-unknown2-453 false
-		--patch-lv2-unknown2-455 false
-		--patch-lv2-sigcheck-450 false
-		--patch-lv2-sigcheck-453 false
+		--patch-lv2-Hermes false
+		--patch-lv2-syscall false
+		--patch-lv2-unknown false
+		--patch-lv2-sigcheck false
 		--label4 ""
-		--patch-lv2krn-features421-441 false
-        --patch-lv2krn-features446-45x false
+		--patch-lv2krn-features false
 		--label5 ""
 		--patch-lv2sysc-features-4501 false
 		--patch-lv2sysc-features-4502 false
 		--patch-lv2sysc-features-4503 false
 		--patch-lv2sysc-features-4504 false
 		--label6 ""
-		--patch-lv2-IPF-Toolbox-450 false
-		--patch-lv2-IPF-Toolbox-453 false
-		--patch-lv2-IPF-Toolbox-455 false
-		--patch-lv2-cobra-446 false
-		--patch-lv2-cobra-453 false
+		--patch-lv2-IPF-Toolbox false
+		--patch-lv2-cobra false
     }
 
     proc main { } {
@@ -144,7 +102,259 @@ namespace eval ::patch_lv2 {
 
     proc patch_elf {elf} {
 	
-	if {$::patch_lv2::options(--patch-lv2-features-460)} {
+	set ::SUF [::get_pup_version2 ${::ORIGINAL_VERSION_TXT}]	
+	if { [regexp "(^\[0-9]{1,2})\.(\[0-9]{1,2})(.*)" $::SUF all ::OFW_MAJOR_VER ::OFW_MINOR_VER SubVerInfo] } {		
+		set ::NEWMFW_VER [format "%.1d.%.2d" $::OFW_MAJOR_VER $::OFW_MINOR_VER]	
+		if { $SubVerInfo != "" } {
+			log "Getting pup version OK! var = ${::NEWMFW_VER} (subversion:$SubVerInfo)"
+		} else { 
+			log "Getting pup version OK! var = ${::NEWMFW_VER}"
+		}		
+	} else {
+		die "Getting pup version FAILED! Exiting!"
+	}
+	
+	if {$::patch_lv2::options(--patch-lv2-features)} {
+	        if {$::NEWMFW_VER == "4.65" || $::NEWMFW_VER == "4.66" } {
+			# Patching [4.65] LV2
+			
+			log "An extra patch for payload stability -- Updated 4.65+ Pattern!"
+
+            set search  "\x4B\xDA\xD5\x85\x7C\x7D\x1B\x78\x4B\xFF\xFF\x34\xF8\x21\xFF\x61"
+            set replace "\x4B\xDA\xD5\x85\x7C\x7D\x1B\x78\x4B\xFF\xFF\x34\x48\x04\xD6\x00"			
+			
+			catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			
+			# Patching [4.6x] LV2 for SysCall36
+		    log "Patching LV2 with SysCall36 4.6x CFW"
+			log "Part 1"
+			log "Updated 4.6x patterns!"
+         
+            set search  "\x41\x9E\xFF\xD4\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
+            set replace "\x60\x00\x00\x00\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+            
+			log "lv2-syscall 4.6x Part 2"
+			
+            set search  "\x41\x9D\x00\xC0\x2F\x84\x00\x04\x40\x9C\x00\x48\xE8\x62\x98\x68"
+            set replace "\x60\x00\x00\x00\x2F\x84\x00\x04\x48\x00\x00\x98\xE8\x62\x98\x68"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"     
+			
+			log "lv2-syscall 4.65+ Part 3 Updated 4.65+ pattern!"
+			
+            set search    "\xFB\xBF\x00\x40\x4B\xFA\x97\x41\x54\x63\x06\x3E\x2F\x83\x00\x00"
+            append search "\x41\x9E\x00\xAC\xE8\x61\x01\x88\x4B\xFF\xF2\xA9\x54\x63\x06\x3E"
+            append search "\x2F\x83\x00\x00\x41\x9E\x00\xAC\x38\x61\x00\x70\x4B\xFF\x64\x3D"
+            append search "\x2F"
+
+            set replace    "\xFB\xBF\x00\x40\x4B\xFA\x97\x41\x54\x63\x06\x3E\x2F\x83\x00\x00"
+            append replace "\x60\x00\x00\x00\xE8\x61\x01\x88\x4B\xFF\xF2\xA9\x54\x63\x06\x3E"
+			append replace "\x2F\x83\x00\x00\x60\x00\x00\x00\x38\x61\x00\x70\x4B\xFF\x64\x3D"
+			append replace "\x2F"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+
+
+		    # Patching Hermes payload into lv2
+		    log "UPDATED Hermes payload 4.65+ LV2"
+
+set search "\x75\x70\x74\x28\x65\x78\x63\x65\x70\x74\x69\x6F"
+append search "\x6E\x29\x20\x49\x6E\x66\x6F\x2E\x0A\x23\x20\x20"
+append search "\x20\x54\x79\x70\x65\x20\x3A\x20\x25\x73\x0A\x23"
+append search "\x20\x20\x20\x53\x52\x52\x30\x20\x3A\x20\x30\x78"
+append search "\x25\x30\x31\x36\x6C\x78\x0A\x23\x20\x20\x20\x53"
+append search "\x52\x52\x31\x20\x3A\x20\x30\x78\x25\x30\x31\x36"
+append search "\x6C\x78\x0A\x23\x20\x20\x20\x44\x53\x49\x53\x52"
+append search "\x3A\x20\x30\x78\x25\x30\x31\x36\x6C\x78\x0A\x23"
+append search "\x20\x20\x20\x44\x41\x52\x20\x20\x3A\x20\x30\x78"
+append search "\x25\x30\x31\x36\x6C\x78\x0A\x23\x20\x20\x20\x54"
+append search "\x42\x20\x20\x20\x3A\x20\x30\x78\x25\x30\x31\x36"
+append search "\x6C\x78\x0A\x23\x20\x20\x20\x48\x57\x20\x54\x68"
+append search "\x72\x65\x61\x64\x20\x23\x3A\x20\x25\x64\x0A\x23"
+append search "\x0A\x23\x20\x42\x61\x63\x6B\x74\x72\x61\x63\x65"
+append search "\x0A\x00\x00\x00\x00\x00\x00\x00\x23\x20\x20\x20"
+append search "\x30\x78\x25\x30\x31\x36\x6C\x78\x0A\x00\x00\x00"
+append search "\x23\x0A\x23\x20\x25\x73\x20\x50\x50\x55\x20\x54"
+append search "\x68\x72\x65\x61\x64\x20\x49\x6E\x66\x6F\x2E\x0A"
+
+set replace "\xF8\x21\xFF\x61\x7C\x08\x02\xA6\xFB\x81\x00\x80"
+append replace "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
+append replace "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
+append replace "\x7C\x7D\x1B\x78\x3B\xE0\x00\x01\x7B\xFF\xF8\x06"
+append replace "\x67\xE4\x00\x2E\x60\x84\xD9\x3C\x38\xA0\x00\x02"
+append replace "\x4B\xD5\xFF\x69\x28\x23\x00\x00\x40\x82\x00\x28"
+append replace "\x67\xFF\x00\x2E\x63\xFF\xD9\x4C\xE8\x7F\x00\x00"
+append replace "\x28\x23\x00\x00\x41\x82\x00\x14\xE8\x7F\x00\x08"
+append replace "\x38\x9D\x00\x09\x4B\xD5\xFE\xED\xEB\xBF\x00\x00"
+append replace "\x7F\xA3\xEB\x78\x4B\xFB\x29\xB4\x2F\x61\x70\x70"
+append replace "\x5F\x68\x6F\x6D\x65\x00\x00\x00\x00\x00\x00\x00"
+append replace "\x80\x00\x00\x00\x00\x2E\xD9\x5C\x80\x00\x00\x00"
+append replace "\x00\x2E\xD9\x6A\x2F\x64\x65\x76\x5F\x66\x6C\x61"
+append replace "\x73\x68\x2F\x70\x6B\x67\x00\x00\x00\x00\x00\x00"
+append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x23\x20\x20\x20"
+append replace "\x30\x78\x25\x30\x31\x36\x6C\x78\x0A\x00\x00\x00"
+append replace "\x23\x0A\x23\x20\x25\x73\x20\x50\x50\x55\x20\x54"
+append replace "\x68\x72\x65\x61\x64\x20\x49\x6E\x66\x6F\x2E\x0A"
+
+            catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			
+	
+		log "Patching LV2 Peek&Poke Part 1"
+		log "Updated 4.65+ Pattern!"
+		log "WARNING: MAY TAKE A WHILE..."
+
+		set search    "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x7C\x71\x43\xA6"
+		append search "\x7C\x92\x43\xA6\x48\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append search "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		
+		set replace   "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+		append replace "\x00\x00\x00\x00\x00\x00\x00\x00\x7C\x71\x43\xA6"
+append replace "\x7C\x92\x43\xA6\x48\x00\x00\x00\xE8\x63\x00\x00"
+append replace "\x4E\x80\x00\x20\xF8\x83\x00\x00\x4E\x80\x00\x20"
+append replace "\x7C\x08\x02\xA6\xF8\x01\x00\x10\x39\x60\x00\xB6"
+append replace "\x44\x00\x00\x22\x7C\x83\x23\x78\xE8\x01\x00\x10"
+append replace "\x7C\x08\x03\xA6\x4E\x80\x00\x20\x7C\x08\x02\xA6"
+append replace "\xF8\x01\x00\x10\x39\x60\x00\xB7\x44\x00\x00\x22"
+append replace "\x38\x60\x00\x00\xE8\x01\x00\x10\x7C\x08\x03\xA6"
+append replace "\x4E\x80\x00\x20\x7C\x08\x02\xA6\xF8\x01\x00\x10"
+append replace "\x7D\x4B\x53\x78\x44\x00\x00\x22\xE8\x01\x00\x10"
+append replace "\x7C\x08\x03\xA6\x4E\x80\x00\x20\x80\x00\x00\x00"
+append replace "\x00\x00\x17\x0C\x80\x00\x00\x00\x00\x00\x17\x14"
+append replace "\x80\x00\x00\x00\x00\x00\x17\x1C\x80\x00\x00\x00"
+append replace "\x00\x00\x17\x3C\x80\x00\x00\x00\x00\x00\x17\x5C"
+
+		
+		catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		
+		log "Part 2"
+		log "Updated for 4.65+ -- WARNING: MAY ALSO TAKE A WHILE :P"
+		
+		set search    "\x33\xF3\x08\x80\x00\x00\x00\x00\x33\xF3\x08\x80"
+		append search "\x00\x00\x00\x00\x33\xF3\x08\x80\x00\x00\x00\x00"
+		append search "\x33\xF3\x08\x80\x00\x00\x00\x00\x33\xF3\x08\x80"
+		append search "\x00\x00\x00\x00\x33\xF3\x08\x80\x00\x00\x00\x00"
+		append search "\x30\x5a\x08\x80"
+		
+		set replace   "\x00\x17\x78\x80\x00\x00\x00\x00\x00\x17\x80\x80"
+		append replace "\x00\x00\x00\x00\x00\x17\x88\x80\x00\x00\x00\x00"
+		append replace "\x00\x17\x90\x80\x00\x00\x00\x00\x00\x17\x98\x80"
+		append replace "\x00\x00\x00\x00\x33\xF3\x08\x80\x00\x00\x00\x00"
+		append replace "\x30\x5a\x08\x80"
+				
+		catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+
+
+		    # Patching lv2
+		    log "Patching/Disable UPDATED NPDRM ECDSA signature check! 4.65 -- LV2"
+            log "Updated 4.65+ patterns!"
+		 
+            set search  "\x4E\x80\x00\x20\x80\x03\x02\x6C\x3D\x60\x00\x46\x3d\x20\x1b\x43"
+            set replace "\x4E\x80\x00\x20\x38\x60\x00\x00\x7C\x63\x07\xB4\x4E\x80\x00\x20"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			
+	log "Patching miscs"
+	log "Added by RedDot -- same patterns! -- 4.6x! :)"
+	
+	set search  "\x63\xFF\x00\x3E\x4B\xFF\xFF\x0C\x83\xBC\x00\x78\x2F\x9D\x00\x00"
+	set replace "\x3B\xE0\x00\x00\x4B\xFF\xFF\x0C\x83\xBC\x00\x78\x2F\x9D\x00\x00"
+	
+	catch_die {::patch_elf $elf $search 0 $replace} \
+    "Unable to patch self [file tail $elf]"
+	
+	log "Part 2 -- 4.6x!"
+	
+	set search  "\xE9\x22\x99\x70\x7C\x08\x02\xA6\xF8\x21\xFF\x21\xF8\x01\x00\xF0"
+	set replace "\x38\x60\x00\x00\x4E\x80\x00\x20\xF8\x21\xFF\x21\xF8\x01\x00\xF0"
+	
+	catch_die {::patch_elf $elf $search 0 $replace} \
+    "Unable to patch self [file tail $elf]"
+	}
+	
+	if {$::NEWMFW_VER == "4.60" } {
 	
 			# Patching [4.6x] LV2 for SysCall36
 		    log "Patching LV2 with SysCall36 4.6x CFW"
@@ -402,117 +612,8 @@ append replace "\x00"
 	catch_die {::patch_elf $elf $search 0 $replace} \
     "Unable to patch self [file tail $elf]"
 	}
-	
-	if {$::patch_lv2::options(--patch-lv2-IPF-Toolbox-455)} {
-		    # Patching IPF Toolbox into lv2
-		    log "Patching IPF MM Stealth Toolbox 4.55 into LV2 -- app_home/PS3_GAME - UPDATED PATTERN!"
-		 
-            set search "\x23\x20\x49\x6E\x74\x65\x72\x72\x75\x70\x74\x28"
-append search "\x65\x78\x63\x65\x70\x74\x69\x6F\x6E\x29\x20\x49"
-append search "\x6E\x66\x6F\x2E\x0A\x23\x20\x20\x20\x54\x79\x70"
-append search "\x65\x20\x3A\x20\x25\x73\x0A\x23\x20\x20\x20\x53"
-append search "\x52\x52\x30\x20\x3A\x20\x30\x78\x25\x30\x31\x36"
-append search "\x6C\x78\x0A\x23\x20\x20\x20\x53\x52\x52\x31\x20"
-append search "\x3A\x20\x30\x78\x25\x30\x31\x36\x6C\x78\x0A\x23"
-append search "\x20\x20\x20\x44\x53\x49\x53\x52\x3A\x20\x30\x78"
-append search "\x25\x30\x31\x36\x6C\x78\x0A\x23\x20\x20\x20\x44"
-append search "\x41\x52\x20\x20\x3A\x20\x30\x78\x25\x30\x31\x36"
-append search "\x6C\x78\x0A\x23\x20\x20\x20\x54\x42\x20\x20\x20"
-append search "\x3A\x20\x30\x78\x25\x30\x31\x36\x6C\x78\x0A\x23"
-append search "\x20\x20\x20\x48\x57\x20\x54\x68\x72\x65\x61\x64"
-append search "\x20\x23\x3A\x20\x25\x64\x0A\x23\x0A\x23\x20\x42"
-append search "\x61\x63\x6B\x74\x72\x61\x63\x65\x0A"
-		   
-set replace "\x23\x20\x49\x6E\x74\x65\x72\x72\xF8\x21\xFF\x61"
-append replace "\x7C\x08\x02\xA6\xFB\x81\x00\x80\xFB\xA1\x00\x88"
-append replace "\xFB\xE1\x00\x98\xFB\x41\x00\x70\xFB\x61\x00\x78"
-append replace "\xF8\x01\x00\xB0\x7C\x9C\x23\x78\x7C\x7D\x1B\x78"
-append replace "\x3B\xE0\x00\x01\x7B\xFF\xF8\x06\x67\xE4\x00\x2E"
-append replace "\x60\x84\xC6\xBC\x38\xA0\x00\x02\x4B\xD6\x12\x55"
-append replace "\x28\x23\x00\x00\x40\x82\x00\x28\x67\xFF\x00\x2E"
-append replace "\x63\xFF\xC6\xCC\xE8\x7F\x00\x00\x28\x23\x00\x00"
-append replace "\x41\x82\x00\x14\xE8\x7F\x00\x08\x38\x9D\x00\x09"
-append replace "\x4B\xD6\x11\xD9\xEB\xBF\x00\x00\x7F\xA3\xEB\x78"
-append replace "\x4B\xFB\x30\xB4\x2F\x61\x70\x70\x5F\x68\x6F\x6D"
-append replace "\x65\x00\x00\x00\x00\x00\x00\x00\x80\x00\x00\x00"
-append replace "\x00\x2E\xC6\xDC\x80\x00\x00\x00\x00\x2E\xC6\xEA"
-append replace "\x2F\x64\x65\x76\x5F\x66\x6C\x61\x73\x68\x2F\x70"
-append replace "\x6B\x67\x00\x00\x00\x00\x00\x00\x00"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"
-			}
-	
-	if {$::patch_lv2::options(--patch-lv2-unknown2-455)} {
-		    # Patching lv2
-		    log "Patching LV2 for 4.55 style MFW"
-            log "UPDATED pattern!"
-		 
-            set search "\x41\x9E\xFD\x68\x4B\xFF\xFD\x68\xe9\x22\x99\x68\x7c\x08\x02\xa6"
-            set replace "\x41\x9E\xFD\x68\x4B\xFF\xFD\x68\x38\x60\x00\x00\x4E\x80\x00\x20"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"
-			}
 
-	if {$::patch_lv2::options(--patch-lv2-syscall-455)} {
-			# Patching [4.5x] LV2 for SysCall36
-		    log "Patching LV2 with SysCall36 4.5x CFW"
-			log "Part 1"
-			log "Updated 4.5x patterns, all credits and thx to Rogero!"
-         
-            set search "\x41\x9E\xFF\xD4\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
-            set replace "\x60\x00\x00\x00\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-            
-			log "lv2-syscall 4.5x Part 2"
-			
-            set search "\x41\x9D\x00\xC0\x2F\x84\x00\x04\x40\x9C\x00\x48\xE8\x62\x98\x68"
-            set replace "\x60\x00\x00\x00\x2F\x84\x00\x04\x48\x00\x00\x98\xE8\x62\x98\x68"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"     
-			log "lv2-syscall 4.55 Part 3 Updated pattern!"
-			
-set search    "\xFB\xBF\x00\x40\x4B\xFA\x9A\xAD\x54\x63\x06\x3E"
-append search "\x2F\x83\x00\x00\x41\x9E\x00\xAC\xE8\x61\x01\x88"
-append search "\x4B\xFF\xF2\xA9\x54\x63\x06\x3E\x2F\x83\x00\x00"
-append search "\x41\x9E\x00\xAC\x38\x61\x00\x70\x4B\xFF\x68\x15"
-
-set replace    "\xFB\xBF\x00\x40\x4B\xFA\x9A\xAD\x54\x63\x06\x3E"
-append replace "\x2F\x83\x00\x00\x60\x00\x00\x00\xE8\x61\x01\x88"
-append replace "\x4B\xFF\xF2\xA9\x54\x63\x06\x3E\x2F\x83\x00\x00"
-append replace "\x60\x00\x00\xAC\x38\x61\x00\x70\x4B\xFF\x68\x15"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			
-			}
-	
-	if {$::patch_lv2::options(--patch-lv2-Hermes-455)} {
-		    # Patching Hermes payload into lv2
-		    log "UPDATED Hermes payload 4.55 LV2"
-		 
-            set search    "\xF8\x21\xFF\x61\x7C\x08\x02\xA6\xFB\x81\x00\x80"
-            append search "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
-            append search "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
-            append search "\x7C\x7D\x1B\x78\x4B\xDA\xE1\x3D\x2B\xA3\x04\x20"
-            append search "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
-            append search "\xE8\x01\x00\xB0"
-			
-			set replace    "\x48\x04\xCF\x00\x7C\x08\x02\xA6\xFB\x81\x00\x80"
-            append replace "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
-            append replace "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
-            append replace "\x7C\x7D\x1B\x78\x4B\xDA\xE1\x3D\x2B\xA3\x04\x20"
-            append replace "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
-            append replace "\xE8\x01\x00\xB0"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"
-			}
-	
-	
-	
-	if {$::patch_lv2::options(--patch-lv2-features-455)} {
+	if {$::NEWMFW_VER == "4.55" } {
 		    
             #Patching Peek&Poke Part 1
 			log "Patching Peek&Poke Part 1"
@@ -586,49 +687,8 @@ append replace "\x30\x47\x50\x80"
             catch_die {::patch_elf $elf $search 0 $replace} \
             "Unable to patch self [file tail $elf]"
 		}
-	
-	    
-	
-	
-	if {$::patch_lv2::options(--patch-lv2-POC-450)} {
-	        
-			#Patch lv2 POC!
-			log "Patching lv2 for fan control + Few Misc Patches"
-			log "Part 1"
-			set search     "\x7C\x7F\x1B\x78\x48\x04\x6C\xC9\x54\x63\x06\x3E\x3B\x81\x00\x71"
-			append search  "\x2F\x83\x00\x00\x3B\x61\x00\x72\x3B\x41\x00\x73\x3B\xC1\x00\x70"
-			set replcae    "\x7C\x7F\x1B\x78\x48\x04\x6C\xC9\x38\x60\x00\x01\x3B\x81\x00\x71"
-			append replace "\x2F\x83\x00\x00\x3B\x61\x00\x72\x3B\x41\x00\x73\x3B\xC1\x00\x70"
-	
-	        catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			
-			log "Part 2"
-			set search     "\x48\x04\x67\xCD\x54\x63\x06\x3E\x7B\xE4\x06\x20\x2F\x83\x00\x00" 
-			append search  "\x7B\xC5\x06\x20\x7B\xA6\x06\x20\x3C\x60\x80\x01\x40\x9E\x00\x24"
-			set replace    "\x48\x04\x67\xCD\x38\x60\x00\x01\x7B\xE4\x06\x20\x2F\x83\x00\x00" 
-			append replace "\x7B\xC5\x06\x20\x7B\xA6\x06\x20\x3C\x60\x80\x01\x40\x9E\x00\x24"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			
-			log "Part 3"
-			set search     "\xF8\x01\x00\x78\xF8\x01\x00\x80\x4B\xFF\x91\x79\x54\x63\x06\x3E" 
-			append search  "\x2F\x1C\x00\x01\x2F\x83\x00\x00\x3C\x60\x80\x01\x38\xC0\x00\xFF"
-			set replace    "\xF8\x01\x00\x78\xF8\x01\x00\x80\x4B\xFF\x91\x79\x38\x60\x00\x01" 
-			append replace "\x2F\x1C\x00\x01\x2F\x83\x00\x00\x3C\x60\x80\x01\x38\xC0\x00\xFF"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			
-			log "Part 4"
-			set search     "\x4E\x80\x00\x20\x4B\xFF\xD4\x3D\x2F\x83\x00\x00\x41\x9E\xFF\x68"
-			set replace    "\x4E\x80\x00\x20\x38\x60\x00\x00\x2F\x83\x00\x00\x41\x9E\xFF\x68"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			log "Done patching POC + Miscs"
-	}
-	
-	if {$::patch_lv2::options(--patch-lv2-features)} {
-		    
 
+    if {$::NEWMFW_VER == "4.40" || $::NEWMFW_VER == "4.41" || $::NEWMFW_VER == "4.42" || $::NEWMFW_VER == "4.43" || $::NEWMFW_VER == "4.44" || $::NEWMFW_VER == "4.45" || $::NEWMFW_VER == "4.46" || $::NEWMFW_VER == "4.47" || $::NEWMFW_VER == "4.48" || $::NEWMFW_VER == "4.49"} {
 			
 			#Patching Peek&Poke Part 1
 			log "Patching Peek&Poke Part 1"
@@ -704,7 +764,7 @@ append replace "\x30\x47\x50\x80"
             "Unable to patch self [file tail $elf]"
 			}
 			
-			if {$::patch_lv2::options(--patch-lv2-features-450)} {
+			if {$::NEWMFW_VER == "4.50" } {
 		    
             #Patching Peek&Poke Part 1
 			log "Patching Peek&Poke Part 1"
@@ -775,178 +835,8 @@ append replace "\x30\x47\x50\x80"
             catch_die {::patch_elf $elf $search 0 $replace} \
             "Unable to patch self [file tail $elf]"
 		}
-			if {$::patch_lv2::options(--patch-other)} {
-		
-		    log "Using Toolboy's patterns!"
-			log "Patching LV2 peek&poke for 4.xx CFW - part 1/2"				 
-			set search     "\x63\xFF\x00\x3E\x4B\xFF\xFF\x0C"
-			set replace    "\x3B\xE0\x00\x00\x4B\xFF\xFF\x0C"
 
-			catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"		 					
-			
-			log "Patching LV2 peek&poke for 4.xx CFW - part 2/2"	
-			set search     "\x41\x9E\xFF\xD4\x38\xDE"
-			set replace    "\x60\x00\x00\x00\x38\xDE"
-
-			catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"		 
-		
-	
-			log "Patching LV1 peek&poke call permission for LV2 into LV2 - part 1/2"				 
-			set search     "\x7C\x71\x43\xA6\x7C\x92\x43\xA6\x48\x00\x00\x00\x00\x00\x00\x00"
-			append search  "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
-			append search  "\x7C\x71\x43\xA6\x7C\x92\x43\xA6"
-			set replace    "\xE8\x63\x00\x00\x4E\x80\x00\x20\xF8\x83\x00\x00\x4E\x80\x00\x20"
-			append replace "\x7C\x08\x02\xA6\xF8\x01\x00\x10\x39\x60\x00\xB6\x44\x00\x00\x22"
-			append replace "\x7C\x83\x23\x78\xE8\x01\x00\x10\x7C\x08\x03\xA6\x4E\x80\x00\x20"
-			append replace "\x7C\x08\x02\xA6\xF8\x01\x00\x10\x39\x60\x00\xB7\x44\x00\x00\x22"
-			append replace "\x38\x60\x00\x00\xE8\x01\x00\x10\x7C\x08\x03\xA6\x4E\x80\x00\x20"
-			append replace "\x7C\x08\x02\xA6\xF8\x01\x00\x10\x7D\x4B\x53\x78\x44\x00\x00\x22"
-			append replace "\xE8\x01\x00\x10\x7C\x08\x03\xA6\x4E\x80\x00\x20\x80\x00\x00\x00"
-			append replace "\x00\x00\x17\x0C\x80\x00\x00\x00\x00\x00\x17\x14\x80\x00\x00\x00"
-			append replace "\x00\x00\x17\x1C\x80\x00\x00\x00\x00\x00\x17\x3C\x80\x00\x00\x00"
-			append replace "\x00\x00\x17\x5C"
-
-			catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"				 					
-			
-			log "Patching LV1 peek&poke call permission for LV2 into LV2 - part 2/2"
-
-			set search     "\x83\x86\x5C\xCB\x37\x6F\x5D\x5C\x43\x93\xA4\xBA\x53\x35\x90\x03"			
-			set replace    "\x80\x00\x00\x00\x00\x00\x17\x78\x80\x00\x00\x00\x00\x00\x17\x80"
-			append replace "\x80\x00\x00\x00\x00\x00\x17\x88\x80\x00\x00\x00\x00\x00\x17\x90"
-			append replace "\x80\x00\x00\x00\x00\x00\x17\x98"
-
-			catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"
-		}
-		
-		if {$::patch_lv2::options(--patch-lv2-Hermes-450)} {
-		    # Patching Hermes payload into lv2
-		    log "Patching UPDATED Hermes payload 4.5x into LV2"
-            log "Credits and thx to Rogero's patterns!"
-		 
-            set search    "\xF8\x21\xFF\x61\x7C\x08\x02\xA6\xFB\x81\x00\x80"
-            append search "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
-            append search "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
-            append search "\x7C\x7D\x1B\x78\x4B\xDA\xF9\x1D\x2B\xA3\x04\x20"
-            append search "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
-            append search "\xE8\x01\x00\xB0"
-			
-			set replace    "\x48\x04\xBF\x28\x7C\x08\x02\xA6\xFB\x81\x00\x80"
-            append replace "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
-            append replace "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
-            append replace "\x7C\x7D\x1B\x78\x4B\xDA\xF9\x1D\x2B\xA3\x04\x20"
-            append replace "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
-            append replace "\xE8\x01\x00\xB0"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-		}
-		
-		if {$::patch_lv2::options(--patch-lv2-Hermes-453)} {
-		    # Patching Hermes payload into lv2
-		    log "Patching UPDATED Hermes payload 4.53 into LV2 - Pattern fixed!"
-		 
-            set search "\xF8\x21\xFF\x61\x7C\x08\x02\xA6\xFB\x81\x00\x80"
-            append search "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
-            append search "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
-            append search "\x7C\x7D\x1B\x78\x4B\xDA\xF7\x49\x2B\xA3\x04\x20"
-            append search "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
-            append search "\xE8\x01\x00\xB0"
-			
-			set replace "\x48\x04\xBE\xE0\x7C\x08\x02\xA6\xFB\x81\x00\x80"
-            append replace "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
-            append replace "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
-            append replace "\x7C\x7D\x1B\x78\x4B\xDA\xF7\x49\x2B\xA3\x04\x20"
-            append replace "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
-            append replace "\xE8\x01\x00\xB0"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"
-			}
-		
-		if {$::patch_lv2::options(--patch-lv2-syscall-45x)} {
-			# Patching [4.5x] LV2 for SysCall36
-		    log "Patching LV2 with SysCall36 4.5x CFW"
-			log "Part 1"
-			log "Updated 4.5x patterns, all credits and thx to Rogero!"
-         
-            set search "\x41\x9E\xFF\xD4\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
-            set replace "\x60\x00\x00\x00\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-            
-			log "lv2-syscall 4.5x Part 2"
-			
-            set search "\x41\x9D\x00\xC0\x2F\x84\x00\x04\x40\x9C\x00\x48\xE8\x62\x98\x68"
-            set replace "\x60\x00\x00\x00\x2F\x84\x00\x04\x48\x00\x00\x98\xE8\x62\x98\x68"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"     
-			log "lv2-syscall 4.5x Part 3"
-			
-            set search "\x54\x63\x06\x3E\x2F\x83\x00\x00\x41\x9E\x00\x70\xE8\x61\x01\x88"
-            set replace "\x54\x63\x06\x3E\x2F\x83\x00\x00\x60\x00\x00\x00\xE8\x61\x01\x88"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			
-			log "lv2-syscall 4.5x Part 4"
-			
-            set search "\x54\x63\x06\x3E\x2F\x83\x00\x00\x41\x9E\x00\x70\x38\x61\x00\x70"
-            set replace "\x54\x63\x06\x3E\x2F\x83\x00\x00\x60\x00\x00\x00\x38\x61\x00\x70"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-		}
-		
-		if {$::patch_lv2::options(--patch-lv2-unknown-45x)} {
-		    # Patching lv2
-		    log "Patching The QA Flag, so the Button COMBO works if PS3 is QA Flagged!"
-            log "All credits and thx to Rogero's lv2 patterns!"
-		 
-            set search  "\x3F\xE0\x80\x01\x63\xFF\x00\x3E\x4B\xFF\xFF\x0C\x83\xBC\x00\x78"
-            set replace "\x3F\xE0\x80\x01\x3B\xE0\x00\x00\x4B\xFF\xFF\x0C\x83\xBC\x00\x78"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-		}
-		
-		if {$::patch_lv2::options(--patch-lv2-unknown2-453)} {
-		    # Patching lv2
-		    log "Patching LV2 for Rogero 4.53 style MFW"
-            log "Credits and thx to habibs patterns!"
-		 
-            set search "\x41\x9E\xFD\x68\x4B\xFF\xFD\x68\xe9\x22\x99\x88\x7c\x08\x02\xa6"
-            set replace "\x41\x9E\xFD\x68\x4B\xFF\xFD\x68\x38\x60\x00\x00\x4E\x80\x00\x20"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"
-			}
-		
-		if {$::patch_lv2::options(--patch-lv2-sigcheck-450)} {
-		    # Patching Hermes payload into lv2
-		    log "Patching/Disable UPDATED NPDRM ECDSA signature check 4.5x -- LV2"
-            log "Credits and thx to Rogero's patterns!"
-		 
-            set search "\x80\x03\x02\x6C\x3D\x20\x1B\x43\x3C\x60\x80\x01\x2F\x80\xFF\xFF"
-            set replace "\x38\x60\x00\x00\x7C\x63\x07\xB4\x4E\x80\x00\x20\x2F\x80\xFF\xFF"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-		}
-		
-		if {$::patch_lv2::options(--patch-lv2-sigcheck-453)} {
-		    # Patching lv2
-		    log "Patching/Disable UPDATED NPDRM ECDSA signature check 4.53 -- LV2"
-            log "Credits and thx to habib's updated patterns!"
-		 
-            set search "\x4E\x80\x00\x20\x80\x03\x02\x6C\x3D\x60\x00\x45\x3D\x20\x1B\x43"
-            set replace "\x4E\x80\x00\x20\x38\x60\x00\x00\x7c\x63\x07\xb4\x4e\x80\x00\x20"
-         
-            catch_die {::patch_elf $elf $search 0 $replace} \
-            "Unable to patch self [file tail $elf]"
-			}
-
-			
-			
-		if {$::patch_lv2::options(--patch-lv2-features-453)} {
+		if {$::NEWMFW_VER == "4.53" } {
 		log "Patching lv2 peek&poke!"
 		log "Patterns by Habib"
 		log "Feature added by RedDot-3ND7355"
@@ -1025,6 +915,291 @@ append replace "\x30\x47\x50\x80"
 	    
 		catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 		}
+	}
+
+	if {$::patch_lv2::options(--patch-lv2-syscall)} {
+	if {$::NEWMFW_VER == "4.55"} {
+			# Patching [4.5x] LV2 for SysCall36
+		    log "Patching LV2 with SysCall36 4.5x CFW"
+			log "Part 1"
+			log "Updated 4.5x patterns, all credits and thx to Rogero!"
+         
+            set search "\x41\x9E\xFF\xD4\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
+            set replace "\x60\x00\x00\x00\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+            
+			log "lv2-syscall 4.5x Part 2"
+			
+            set search "\x41\x9D\x00\xC0\x2F\x84\x00\x04\x40\x9C\x00\x48\xE8\x62\x98\x68"
+            set replace "\x60\x00\x00\x00\x2F\x84\x00\x04\x48\x00\x00\x98\xE8\x62\x98\x68"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"     
+			log "lv2-syscall 4.55 Part 3 Updated pattern!"
+			
+set search    "\xFB\xBF\x00\x40\x4B\xFA\x9A\xAD\x54\x63\x06\x3E"
+append search "\x2F\x83\x00\x00\x41\x9E\x00\xAC\xE8\x61\x01\x88"
+append search "\x4B\xFF\xF2\xA9\x54\x63\x06\x3E\x2F\x83\x00\x00"
+append search "\x41\x9E\x00\xAC\x38\x61\x00\x70\x4B\xFF\x68\x15"
+
+set replace    "\xFB\xBF\x00\x40\x4B\xFA\x9A\xAD\x54\x63\x06\x3E"
+append replace "\x2F\x83\x00\x00\x60\x00\x00\x00\xE8\x61\x01\x88"
+append replace "\x4B\xFF\xF2\xA9\x54\x63\x06\x3E\x2F\x83\x00\x00"
+append replace "\x60\x00\x00\xAC\x38\x61\x00\x70\x4B\xFF\x68\x15"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			}
+	
+	if {$::NEWMFW_VER == "4.50"} {
+			# Patching [4.5x] LV2 for SysCall36
+		    log "Patching LV2 with SysCall36 4.5x CFW"
+			log "Part 1"
+			log "Updated 4.5x patterns, all credits and thx to Rogero!"
+         
+            set search "\x41\x9E\xFF\xD4\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
+            set replace "\x60\x00\x00\x00\x38\xDE\x00\x07\x88\x1E\x00\x07\x2F\x84\x00\x01"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+            
+			log "lv2-syscall 4.5x Part 2"
+			
+            set search "\x41\x9D\x00\xC0\x2F\x84\x00\x04\x40\x9C\x00\x48\xE8\x62\x98\x68"
+            set replace "\x60\x00\x00\x00\x2F\x84\x00\x04\x48\x00\x00\x98\xE8\x62\x98\x68"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"     
+			log "lv2-syscall 4.5x Part 3"
+			
+            set search "\x54\x63\x06\x3E\x2F\x83\x00\x00\x41\x9E\x00\x70\xE8\x61\x01\x88"
+            set replace "\x54\x63\x06\x3E\x2F\x83\x00\x00\x60\x00\x00\x00\xE8\x61\x01\x88"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			log "lv2-syscall 4.5x Part 4"
+			
+            set search "\x54\x63\x06\x3E\x2F\x83\x00\x00\x41\x9E\x00\x70\x38\x61\x00\x70"
+            set replace "\x54\x63\x06\x3E\x2F\x83\x00\x00\x60\x00\x00\x00\x38\x61\x00\x70"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		}
+	}
+	
+	if {$::patch_lv2::options(--patch-lv2-Hermes)} {
+	if {$::NEWMFW_VER == "4.55"} {
+		    # Patching Hermes payload into lv2
+		    log "UPDATED Hermes payload 4.55 LV2"
+		 
+            set search    "\xF8\x21\xFF\x61\x7C\x08\x02\xA6\xFB\x81\x00\x80"
+            append search "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
+            append search "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
+            append search "\x7C\x7D\x1B\x78\x4B\xDA\xE1\x3D\x2B\xA3\x04\x20"
+            append search "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
+            append search "\xE8\x01\x00\xB0"
+			
+			set replace    "\x48\x04\xCF\x00\x7C\x08\x02\xA6\xFB\x81\x00\x80"
+            append replace "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
+            append replace "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
+            append replace "\x7C\x7D\x1B\x78\x4B\xDA\xE1\x3D\x2B\xA3\x04\x20"
+            append replace "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
+            append replace "\xE8\x01\x00\xB0"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			}
+	
+	if {$::NEWMFW_VER == "4.50"} {
+		    # Patching Hermes payload into lv2
+		    log "Patching UPDATED Hermes payload 4.5x into LV2"
+            log "Credits and thx to Rogero's patterns!"
+		 
+            set search    "\xF8\x21\xFF\x61\x7C\x08\x02\xA6\xFB\x81\x00\x80"
+            append search "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
+            append search "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
+            append search "\x7C\x7D\x1B\x78\x4B\xDA\xF9\x1D\x2B\xA3\x04\x20"
+            append search "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
+            append search "\xE8\x01\x00\xB0"
+			
+			set replace    "\x48\x04\xBF\x28\x7C\x08\x02\xA6\xFB\x81\x00\x80"
+            append replace "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
+            append replace "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
+            append replace "\x7C\x7D\x1B\x78\x4B\xDA\xF9\x1D\x2B\xA3\x04\x20"
+            append replace "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
+            append replace "\xE8\x01\x00\xB0"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		}
+		
+		if {$::NEWMFW_VER == "4.53"} {
+		    # Patching Hermes payload into lv2
+		    log "Patching UPDATED Hermes payload 4.53 into LV2 - Pattern fixed!"
+		 
+            set search "\xF8\x21\xFF\x61\x7C\x08\x02\xA6\xFB\x81\x00\x80"
+            append search "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
+            append search "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
+            append search "\x7C\x7D\x1B\x78\x4B\xDA\xF7\x49\x2B\xA3\x04\x20"
+            append search "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
+            append search "\xE8\x01\x00\xB0"
+			
+			set replace "\x48\x04\xBE\xE0\x7C\x08\x02\xA6\xFB\x81\x00\x80"
+            append replace "\xFB\xA1\x00\x88\xFB\xE1\x00\x98\xFB\x41\x00\x70"
+            append replace "\xFB\x61\x00\x78\xF8\x01\x00\xB0\x7C\x9C\x23\x78"
+            append replace "\x7C\x7D\x1B\x78\x4B\xDA\xF7\x49\x2B\xA3\x04\x20"
+            append replace "\x3F\xE0\x80\x01\x63\xFF\x00\x34\x40\x9D\x00\x2C"
+            append replace "\xE8\x01\x00\xB0"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			}
+	}
+	    
+	
+	
+	if {$::patch_lv2::options(--patch-lv2-POC-450)} {
+	        
+			#Patch lv2 POC!
+			log "Patching lv2 for fan control + Few Misc Patches"
+			log "Part 1"
+			set search     "\x7C\x7F\x1B\x78\x48\x04\x6C\xC9\x54\x63\x06\x3E\x3B\x81\x00\x71"
+			append search  "\x2F\x83\x00\x00\x3B\x61\x00\x72\x3B\x41\x00\x73\x3B\xC1\x00\x70"
+			set replcae    "\x7C\x7F\x1B\x78\x48\x04\x6C\xC9\x38\x60\x00\x01\x3B\x81\x00\x71"
+			append replace "\x2F\x83\x00\x00\x3B\x61\x00\x72\x3B\x41\x00\x73\x3B\xC1\x00\x70"
+	
+	        catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			log "Part 2"
+			set search     "\x48\x04\x67\xCD\x54\x63\x06\x3E\x7B\xE4\x06\x20\x2F\x83\x00\x00" 
+			append search  "\x7B\xC5\x06\x20\x7B\xA6\x06\x20\x3C\x60\x80\x01\x40\x9E\x00\x24"
+			set replace    "\x48\x04\x67\xCD\x38\x60\x00\x01\x7B\xE4\x06\x20\x2F\x83\x00\x00" 
+			append replace "\x7B\xC5\x06\x20\x7B\xA6\x06\x20\x3C\x60\x80\x01\x40\x9E\x00\x24"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			log "Part 3"
+			set search     "\xF8\x01\x00\x78\xF8\x01\x00\x80\x4B\xFF\x91\x79\x54\x63\x06\x3E" 
+			append search  "\x2F\x1C\x00\x01\x2F\x83\x00\x00\x3C\x60\x80\x01\x38\xC0\x00\xFF"
+			set replace    "\xF8\x01\x00\x78\xF8\x01\x00\x80\x4B\xFF\x91\x79\x38\x60\x00\x01" 
+			append replace "\x2F\x1C\x00\x01\x2F\x83\x00\x00\x3C\x60\x80\x01\x38\xC0\x00\xFF"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			log "Part 4"
+			set search     "\x4E\x80\x00\x20\x4B\xFF\xD4\x3D\x2F\x83\x00\x00\x41\x9E\xFF\x68"
+			set replace    "\x4E\x80\x00\x20\x38\x60\x00\x00\x2F\x83\x00\x00\x41\x9E\xFF\x68"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			log "Done patching POC + Miscs"
+	}
+	
+	
+			if {$::patch_lv2::options(--patch-other)} {
+		
+		    log "Using Toolboy's patterns!"
+			log "Patching LV2 peek&poke for 4.xx CFW - part 1/2"				 
+			set search     "\x63\xFF\x00\x3E\x4B\xFF\xFF\x0C"
+			set replace    "\x3B\xE0\x00\x00\x4B\xFF\xFF\x0C"
+
+			catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"		 					
+			
+			log "Patching LV2 peek&poke for 4.xx CFW - part 2/2"	
+			set search     "\x41\x9E\xFF\xD4\x38\xDE"
+			set replace    "\x60\x00\x00\x00\x38\xDE"
+
+			catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"		 
+		
+	
+			log "Patching LV1 peek&poke call permission for LV2 into LV2 - part 1/2"				 
+			set search     "\x7C\x71\x43\xA6\x7C\x92\x43\xA6\x48\x00\x00\x00\x00\x00\x00\x00"
+			append search  "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+			append search  "\x7C\x71\x43\xA6\x7C\x92\x43\xA6"
+			set replace    "\xE8\x63\x00\x00\x4E\x80\x00\x20\xF8\x83\x00\x00\x4E\x80\x00\x20"
+			append replace "\x7C\x08\x02\xA6\xF8\x01\x00\x10\x39\x60\x00\xB6\x44\x00\x00\x22"
+			append replace "\x7C\x83\x23\x78\xE8\x01\x00\x10\x7C\x08\x03\xA6\x4E\x80\x00\x20"
+			append replace "\x7C\x08\x02\xA6\xF8\x01\x00\x10\x39\x60\x00\xB7\x44\x00\x00\x22"
+			append replace "\x38\x60\x00\x00\xE8\x01\x00\x10\x7C\x08\x03\xA6\x4E\x80\x00\x20"
+			append replace "\x7C\x08\x02\xA6\xF8\x01\x00\x10\x7D\x4B\x53\x78\x44\x00\x00\x22"
+			append replace "\xE8\x01\x00\x10\x7C\x08\x03\xA6\x4E\x80\x00\x20\x80\x00\x00\x00"
+			append replace "\x00\x00\x17\x0C\x80\x00\x00\x00\x00\x00\x17\x14\x80\x00\x00\x00"
+			append replace "\x00\x00\x17\x1C\x80\x00\x00\x00\x00\x00\x17\x3C\x80\x00\x00\x00"
+			append replace "\x00\x00\x17\x5C"
+
+			catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"				 					
+			
+			log "Patching LV1 peek&poke call permission for LV2 into LV2 - part 2/2"
+
+			set search     "\x83\x86\x5C\xCB\x37\x6F\x5D\x5C\x43\x93\xA4\xBA\x53\x35\x90\x03"			
+			set replace    "\x80\x00\x00\x00\x00\x00\x17\x78\x80\x00\x00\x00\x00\x00\x17\x80"
+			append replace "\x80\x00\x00\x00\x00\x00\x17\x88\x80\x00\x00\x00\x00\x00\x17\x90"
+			append replace "\x80\x00\x00\x00\x00\x00\x17\x98"
+
+			catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+		}
+		
+		if {$::patch_lv2::options(--patch-lv2-unknown)} {
+		if {$::NEWMFW_VER == "4.55" } {
+		    # Patching lv2
+		    log "Patching LV2 for 4.55 style MFW"
+            log "UPDATED pattern!"
+		 
+            set search  "\x41\x9E\xFD\x68\x4B\xFF\xFD\x68\xe9\x22\x99\x68\x7c\x08\x02\xa6"
+            set replace "\x41\x9E\xFD\x68\x4B\xFF\xFD\x68\x38\x60\x00\x00\x4E\x80\x00\x20"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			}
+		
+		
+		if {$::NEWMFW_VER == "4.50" } {
+		    # Patching lv2
+		    log "Patching The QA Flag, so the Button COMBO works if PS3 is QA Flagged!"
+            log "All credits and thx to Rogero's lv2 patterns!"
+		 
+            set search  "\x3F\xE0\x80\x01\x63\xFF\x00\x3E\x4B\xFF\xFF\x0C\x83\xBC\x00\x78"
+            set replace "\x3F\xE0\x80\x01\x3B\xE0\x00\x00\x4B\xFF\xFF\x0C\x83\xBC\x00\x78"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		}
+		
+		if {$::NEWMFW_VER == "4.53" } {
+		    # Patching lv2
+		    log "Patching LV2 for Rogero 4.53 style MFW"
+            log "Credits and thx to habibs patterns!"
+		 
+            set search  "\x41\x9E\xFD\x68\x4B\xFF\xFD\x68\xe9\x22\x99\x88\x7c\x08\x02\xa6"
+            set replace "\x41\x9E\xFD\x68\x4B\xFF\xFD\x68\x38\x60\x00\x00\x4E\x80\x00\x20"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			}
+		}
+		
+		if {$::patch_lv2::options(--patch-lv2-sigcheck)} {
+		if {$::NEWMFW_VER == "4.50" } {
+		    # Patching Hermes payload into lv2
+		    log "Patching/Disable UPDATED NPDRM ECDSA signature check 4.5x -- LV2"
+            log "Credits and thx to Rogero's patterns!"
+		 
+            set search "\x80\x03\x02\x6C\x3D\x20\x1B\x43\x3C\x60\x80\x01\x2F\x80\xFF\xFF"
+            set replace "\x38\x60\x00\x00\x7C\x63\x07\xB4\x4E\x80\x00\x20\x2F\x80\xFF\xFF"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		}
+		
+		if {$::NEWMFW_VER == "4.53" || $::NEWMFW_VER == "4.55" } {
+		    # Patching lv2
+		    log "Patching/Disable UPDATED NPDRM ECDSA signature check 4.53 & 4.55 -- LV2"
+            log "Credits and thx to habib's updated patterns!"
+		 
+            set search "\x4E\x80\x00\x20\x80\x03\x02\x6C\x3D\x60\x00\x45\x3D\x20\x1B\x43"
+            set replace "\x4E\x80\x00\x20\x38\x60\x00\x00\x7c\x63\x07\xb4\x4e\x80\x00\x20"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			}
+        }		
 		
 		if {$::patch_lv2::options(--patch-lv2sysc-features-4501)} {
 		    
@@ -1076,8 +1251,8 @@ append replace "\x30\x47\x50\x80"
             "Unable to patch self [file tail $elf]"
 		}
 		
-		if {$::patch_lv2::options(--patch-lv2krn-features421-441)} {
-            
+		if {$::patch_lv2::options(--patch-lv2krn-features)} {
+            if {$::NEWMFW_VER <= "4.42"} {
 			#Patching lv2_kernel sigcheck!
 			log "Patching lv2_kernel!"
             log "Values for  4.21 tm 4.41 Credits to Kakaroto and PS3DevWiki for posting the patterns!"
@@ -1092,7 +1267,7 @@ append replace "\x30\x47\x50\x80"
             catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
         }
 		
-		if {$::patch_lv2::options(--patch-lv2krn-features446-45x)} {
+		if {$::NEWMFW_VER >= "4.46"} {
             
 			#Patching lv2_kernel sigcheck!
 			log "Patching lv2_kernel!"
@@ -1107,8 +1282,50 @@ append replace "\x30\x47\x50\x80"
             
             catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
         }
+		}
 		
-		if {$::patch_lv2::options(--patch-lv2-IPF-Toolbox-450)} {
+		if {$::patch_lv2::options(--patch-lv2-IPF-Toolbox)} {
+		if {$::NEWMFW_VER == "4.55" } {
+		    # Patching IPF Toolbox into lv2
+		    log "Patching IPF MM Stealth Toolbox 4.55 into LV2 -- app_home/PS3_GAME - UPDATED PATTERN!"
+		 
+            set search "\x23\x20\x49\x6E\x74\x65\x72\x72\x75\x70\x74\x28"
+append search "\x65\x78\x63\x65\x70\x74\x69\x6F\x6E\x29\x20\x49"
+append search "\x6E\x66\x6F\x2E\x0A\x23\x20\x20\x20\x54\x79\x70"
+append search "\x65\x20\x3A\x20\x25\x73\x0A\x23\x20\x20\x20\x53"
+append search "\x52\x52\x30\x20\x3A\x20\x30\x78\x25\x30\x31\x36"
+append search "\x6C\x78\x0A\x23\x20\x20\x20\x53\x52\x52\x31\x20"
+append search "\x3A\x20\x30\x78\x25\x30\x31\x36\x6C\x78\x0A\x23"
+append search "\x20\x20\x20\x44\x53\x49\x53\x52\x3A\x20\x30\x78"
+append search "\x25\x30\x31\x36\x6C\x78\x0A\x23\x20\x20\x20\x44"
+append search "\x41\x52\x20\x20\x3A\x20\x30\x78\x25\x30\x31\x36"
+append search "\x6C\x78\x0A\x23\x20\x20\x20\x54\x42\x20\x20\x20"
+append search "\x3A\x20\x30\x78\x25\x30\x31\x36\x6C\x78\x0A\x23"
+append search "\x20\x20\x20\x48\x57\x20\x54\x68\x72\x65\x61\x64"
+append search "\x20\x23\x3A\x20\x25\x64\x0A\x23\x0A\x23\x20\x42"
+append search "\x61\x63\x6B\x74\x72\x61\x63\x65\x0A"
+		   
+set replace "\x23\x20\x49\x6E\x74\x65\x72\x72\xF8\x21\xFF\x61"
+append replace "\x7C\x08\x02\xA6\xFB\x81\x00\x80\xFB\xA1\x00\x88"
+append replace "\xFB\xE1\x00\x98\xFB\x41\x00\x70\xFB\x61\x00\x78"
+append replace "\xF8\x01\x00\xB0\x7C\x9C\x23\x78\x7C\x7D\x1B\x78"
+append replace "\x3B\xE0\x00\x01\x7B\xFF\xF8\x06\x67\xE4\x00\x2E"
+append replace "\x60\x84\xC6\xBC\x38\xA0\x00\x02\x4B\xD6\x12\x55"
+append replace "\x28\x23\x00\x00\x40\x82\x00\x28\x67\xFF\x00\x2E"
+append replace "\x63\xFF\xC6\xCC\xE8\x7F\x00\x00\x28\x23\x00\x00"
+append replace "\x41\x82\x00\x14\xE8\x7F\x00\x08\x38\x9D\x00\x09"
+append replace "\x4B\xD6\x11\xD9\xEB\xBF\x00\x00\x7F\xA3\xEB\x78"
+append replace "\x4B\xFB\x30\xB4\x2F\x61\x70\x70\x5F\x68\x6F\x6D"
+append replace "\x65\x00\x00\x00\x00\x00\x00\x00\x80\x00\x00\x00"
+append replace "\x00\x2E\xC6\xDC\x80\x00\x00\x00\x00\x2E\xC6\xEA"
+append replace "\x2F\x64\x65\x76\x5F\x66\x6C\x61\x73\x68\x2F\x70"
+append replace "\x6B\x67\x00\x00\x00\x00\x00\x00\x00"
+         
+            catch_die {::patch_elf $elf $search 0 $replace} \
+            "Unable to patch self [file tail $elf]"
+			}
+		
+		if {$::NEWMFW_VER == "4.50" } {
 		    # Patching IPF Toolbox into lv2
 		    log "Patching IPF MM Stealth Toolbox 4.50 into LV2 -- app_home/PS3_GAME!"
             log "Credits and thx to Rogero's patterns! -- Requires adding the Toolbox into devflash\pkg.... !"
@@ -1149,7 +1366,7 @@ append replace "\x30\x47\x50\x80"
             "Unable to patch self [file tail $elf]"
 			}
 			
-			if {$::patch_lv2::options(--patch-lv2-IPF-Toolbox-453)} {
+			if {$::NEWMFW_VER == "4.53" } {
 		    # Patching IPF Toolbox into lv2
 		    log "Patching IPF MM Stealth Toolbox 4.53 into LV2 -- app_home/PS3_GAME - fixed PATTERN!"
             log "Credits and thx to Rogero's patterns! -- Requires adding the folder into devflash\pkg.... !"
@@ -1189,8 +1406,10 @@ append replace "\x30\x47\x50\x80"
             catch_die {::patch_elf $elf $search 0 $replace} \
             "Unable to patch self [file tail $elf]"
 			}
+		}
 		
-		if {$::patch_lv2::options(--patch-lv2-cobra-446)} {
+		if {$::patch_lv2::options(--patch-lv2-cobra)} {
+		if {$::NEWMFW_VER == "4.46" } {
 		    # Patching LV2 to add Cobra Features 4.46
 		    log "Patching LV2 Part1 -- All credits to the Cobra monkey!"
 		 
@@ -6131,7 +6350,7 @@ append replace "\x00\x00\x00\x00\x00\x00\x00\x00"
 			
 			}
 			
-			if {$::patch_lv2::options(--patch-lv2-cobra-453)} {
+			if {$::NEWMFW_VER == "4.53" } {
 		    # Patching LV2 to add Cobra Features 4.53
 		    log "Part 1 - Patching LV2 4.53 v1.04 -- All credits to HABIB for his patterns, Great work Sire!!"
 		 
@@ -10259,5 +10478,6 @@ append replace "\x00\x00\x00\x00\x00\x00\x00\x00"
 			
 			
 			}
+		}
 	}
 }

@@ -11,81 +11,48 @@
 # Priority: 1
 # Description: [4.xx] Patch vsh[.self]
 
-# Option --allow-unsigned-app-4xx: [4.4x - 4.46] Patch to allow running of unsigned applications!
-# Option --allow-unsigned-app-450: [4.5x] Patch to allow running of unsigned applications!
-# Option --allow-unsigned-app-460: [4.6x] Patch to allow running of unsigned applications!
-# Option --reactpsn-online-offline: [4.4x - 4.46] Patch to add ReactPSN online/offline, From habib!
-# Option --reactpsn-online-offline-45x: [4.50] Patch to add ReactPSN online/offline
-# Option --reactpsn-online-offline-453: [4.53] Patch to add ReactPSN online/offline
-# Option --reactpsn-online-offline-455: [4.55] Patch to add ReactPSN online/offline
-# Option --reactpsn-online-offline-460: [4.6x] Patch to add ReactPSN online/offline
+# Option --allow-unsigned-app-4xx: [4.xx] Patch to allow running of unsigned applications!
+# Option --reactpsn-online-offline: [4.xx] Patch to add ReactPSN online/offline, From habib!
 # Option --label: Extra VSH patches
-# Option --xtra1-vsh-habib-45x: [4.50] Allow Debug PKG install
-# Option --xtra1-vsh-habib-453: [4.53] Allow Debug PKG install
-# Option --xtra1-vsh-habib-446: [4.46] Firmware SysValue -- PS2 Related!
-# Option --xtra2-vsh-habib-45x: [4.50] Firmware SysValue -- PS2 Related!
-# Option --xtra2-vsh-habib-453: [4.53] Firmware SysValue -- PS2 Related!
-# Option --xtra3-vsh-habib-45x: [4.50] Fix act.dat Remove on boot
-# Option --xtra3-vsh-habib-453: [4.53] Fix act.dat Remove on boot
+# Option --xtra1-vsh-habib-446: [4.46|.50|.53] Allow Debug PKG install
+# Option --xtra2-vsh-habib: [4.46|.50|.53] Firmware SysValue -- PS2 Related!
+# Option --xtra3-vsh-habib: [4.50|.53] Fix act.dat Remove on boot
 # Option --label2: InGame Screenshots patches
 # Option --patch-ingamescreenshot-features: Patch for Ingame Screenshots [4.46 to 4.6x]
 # Option --patch-ingamescreenshot-photo: Patch Photo Category Ingame             (If Selected Dont Enable Permanent)
 # Option --patch-ingamescreenshot-photo2: Patch Photo Category Permanent          (If Selected Dont Enable Ingame)
 # Option --label4: Cobra Featured MFW Only! [Deselect all other VSH Patches]
-# Option --allow-vshcobra-446:[4.46] **ALLIN1** Patch VSH for Cobra Compatibility! Select Only for COBRA 4.46!
-# Option --allow-vshcobra-453:[4.53] **ALLIN1** Patch VSH for Cobra Compatibility! Select Only for COBRA 4.53!
+# Option --allow-vshcobra:[4.46|.53] **ALLIN1** Patch VSH for Cobra Compatibility! Select Only for COBRA!
 
 # Type --allow-unsigned-app-4xx: boolean
-# Type --allow-unsigned-app-450: boolean
-# Type --allow-unsigned-app-460: boolean
 # Type --reactpsn-online-offline: boolean
-# Type --reactpsn-online-offline-45x: boolean
-# Type --reactpsn-online-offline-453: boolean
-# Type --reactpsn-online-offline-455: boolean
-# Type --reactpsn-online-offline-460: boolean
 # Type --label: label
 # Type --xtra1-vsh-habib-446: boolean
-# Type --xtra1-vsh-habib-45x: boolean
-# Type --xtra1-vsh-habib-453: boolean
-# Type --xtra2-vsh-habib-45x: boolean
-# Type --xtra2-vsh-habib-453: boolean
-# Type --xtra3-vsh-habib-45x: boolean
-# Type --xtra3-vsh-habib-453: boolean
+# Type --xtra2-vsh-habib: boolean
+# Type --xtra3-vsh-habib: boolean
 # Type --label2: label
 # Type --patch-ingamescreenshot-features: boolean
 # Type --patch-ingamescreenshot-photo: boolean
 # Type --patch-ingamescreenshot-photo2: boolean
 # Type --label4: label
-# Type --allow-vshcobra-446: boolean
-# Type --allow-vshcobra-453: boolean
+# Type --allow-vshcobra: boolean
 
 
 namespace eval ::patch_AAA {
 
     array set ::patch_AAA::options {
         --allow-unsigned-app-4xx false
-		--allow-unsigned-app-450 false
-		--allow-unsigned-app-460 true
-		--reactpsn-online-offline false
-		--reactpsn-online-offline-45x false
-		--reactpsn-online-offline-453 false
-		--reactpsn-online-offline-455 false
-		--reactpsn-online-offline-460 true
+		--reactpsn-online-offline true
 		--label ""
 		--xtra1-vsh-habib-446 false
-		--xtra1-vsh-habib-45x false
-		--xtra1-vsh-habib-453 false
-		--xtra2-vsh-habib-45x false
-		--xtra2-vsh-habib-453 false
-		--xtra3-vsh-habib-45x false
-		--xtra3-vsh-habib-453 false
+		--xtra2-vsh-habib false
+		--xtra3-vsh-habib false
 		--label2 ""
 		--patch-ingamescreenshot-features true
 		--patch-ingamescreenshot-photo true
 		--patch-ingamescreenshot-photo2 false
 		--label4 ""
-		--allow-vshcobra-446 false
-		--allow-vshcobra-453 false
+		--allow-vshcobra false
     }
 
     proc main { } {
@@ -127,6 +94,20 @@ namespace eval ::patch_AAA {
     }
 
     proc patch_elf {elf} {
+	
+	
+	set ::SUF [::get_pup_version2 ${::ORIGINAL_VERSION_TXT}]	
+	if { [regexp "(^\[0-9]{1,2})\.(\[0-9]{1,2})(.*)" $::SUF all ::OFW_MAJOR_VER ::OFW_MINOR_VER SubVerInfo] } {		
+		set ::NEWMFW_VER [format "%.1d.%.2d" $::OFW_MAJOR_VER $::OFW_MINOR_VER]	
+		if { $SubVerInfo != "" } {
+			log "Getting pup version OK! var = ${::NEWMFW_VER} (subversion:$SubVerInfo)"
+		} else { 
+			log "Getting pup version OK! var = ${::NEWMFW_VER}"
+		}		
+	} else {
+		die "Getting pup version FAILED! Exiting!"
+	}
+	
 	    if {$::patch_AAA::options(--patch-ingamescreenshot-features)} {
 			log "Patching Screenshot Option"
 			log "Part 1"
@@ -141,6 +122,8 @@ namespace eval ::patch_AAA {
 		}
 	
         if {$::patch_AAA::options(--allow-unsigned-app-4xx) } {
+		if {$::NEWMFW_VER == "4.40" || $::NEWMFW_VER == "4.41" || $::NEWMFW_VER == "4.42" || $::NEWMFW_VER == "4.43" || $::NEWMFW_VER == "4.44" || $::NEWMFW_VER == "4.45" || $::NEWMFW_VER == "4.46"} {
+
             log "Patching [file tail $elf] to allow running of unsigned applications"
 			log "Proved Legit by RedDot-3ND7355"
 			log "Part 1"
@@ -159,62 +142,7 @@ namespace eval ::patch_AAA {
             catch_die {::patch_elf $elf $search 20 $replace} "Unable to patch self [file tail $elf]"
         }
 		
-		if {$::patch_AAA::options(--reactpsn-online-offline) } {
-            log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
-			log "Added by RedDot-3ND7355"
-			log "Patterns by Habib!"
-			log "Part 1"
-			
-			set search  "\x7c\x08\x02\xa6\xf8\x01\x00\x80\x4b\xdb\xe7\x2d\x60\x00\x00\x00"
-            set replace "\x7c\x08\x02\xa6\xf8\x01\x00\x80\x4b\xdb\xe7\x2d\x38\x60\x00\x00"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			
-			log "Part 2"
-			
-			set search  "\x7c\x08\x02\xa6\xf8\x01\x00\x80\x48\x3d\x68\xd9\x38\x03\xff\xff"
-			set replace "\x7c\x08\x02\xa6\xf8\x01\x00\x80\x38\x60\x00\x00\x38\x03\xff\xff"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-		}
-		
-		if {$::patch_AAA::options(--reactpsn-online-offline-45x) } {
-            log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
-			log "Updated pattern for 4.5x...."
-			log "Part 1"
-			
-			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\x8F\xB9\x60\x00\x00\x00"
-            set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\x8F\xB9\x38\x60\x00\x00"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			
-			log "Part 2"
-			
-			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x3D\x45\xFD\x38\x03\xFF\xFF"
-			set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x38\x60\x00\x00\x38\x03\xFF\xFF"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-		}
-		
-		if {$::patch_AAA::options(--reactpsn-online-offline-453) } {
-            log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
-			log "Updated pattern for 4.53...."
-			log "Part 1"
-			
-			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\x92\xD5\x60\x00\x00\x00"
-            set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\x92\xD5\x38\x60\x00\x00"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-			
-			log "Part 2"
-			
-			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x3D\x49\x1D\x38\x03\xFF\xFF"
-			set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x38\x60\x00\x00\x38\x03\xFF\xFF"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
-		}
-		
-		if {$::patch_AAA::options(--allow-unsigned-app-450) } {
+	if {$::NEWMFW_VER == "4.50" || $::NEWMFW_VER == "4.51" || $::NEWMFW_VER == "4.52" || $::NEWMFW_VER == "4.53" || $::NEWMFW_VER == "4.54" || $::NEWMFW_VER == "4.55" || $::NEWMFW_VER == "4.56" || $::NEWMFW_VER == "4.57" || $::NEWMFW_VER == "4.58" || $::NEWMFW_VER == "4.59"} {
             log "Patching [file tail $elf] to allow running of unsigned applications!"
 			log "Part 1 --  4.50"
 			
@@ -240,9 +168,9 @@ namespace eval ::patch_AAA {
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 			}
 		
-		if {$::patch_AAA::options(--allow-unsigned-app-460) } {
+		if {$::NEWMFW_VER == "4.60" || $::NEWMFW_VER == "4.65"} {
             log "Patching [file tail $elf] to allow running of unsigned applications!"
-			log "Part 1 --  4.60"
+			log "Part 1 --  4.6x"
 			
 			set search "\xF8\x21\xFF\x81\x7C\x08\x02\xA6\x38\x61\x00\x70\xF8\x01\x00\x90"
 			append search "\x4B\xFF\xFF\xE1\x38\x00\x00\x00\x2F\x83\x00\x00\x40\x9E\x00\x10"
@@ -273,8 +201,28 @@ namespace eval ::patch_AAA {
 			
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 			}
+		}
 		
-		if {$::patch_AAA::options(--reactpsn-online-offline-460) } {
+		if {$::patch_AAA::options(--reactpsn-online-offline) } {
+		if {$::NEWMFW_VER == "4.65"} {
+            log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
+			log "Updated pattern for 4.65"
+			log "Part 1"
+			
+			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\xc4\xf9\x60\x00\x00\x00"
+            set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\xc4\xf9\x38\x60\x00\x00"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			log "Part 2"
+			
+			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x3D\x7b\x41\x38\x03\xFF\xFF"
+			set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x38\x60\x00\x00\x38\x03\xFF\xFF"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		}
+		
+		if {$::NEWMFW_VER == "4.60"} {
             log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
 			log "Updated pattern for 4.60"
 			log "Part 1"
@@ -292,7 +240,7 @@ namespace eval ::patch_AAA {
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 		}
 		
-		if {$::patch_AAA::options(--reactpsn-online-offline-455) } {
+		if {$::NEWMFW_VER == "4.55"} {
             log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
 			log "Updated pattern for 4.55"
 			log "Part 1"
@@ -310,7 +258,65 @@ namespace eval ::patch_AAA {
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 		}
 		
-		if {$::patch_AAA::options(--xtra1-vsh-habib-45x) } {
+		if {$::NEWMFW_VER == "4.53"} {
+            log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
+			log "Updated pattern for 4.53...."
+			log "Part 1"
+			
+			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\x92\xD5\x60\x00\x00\x00"
+            set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\x92\xD5\x38\x60\x00\x00"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			log "Part 2"
+			
+			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x3D\x49\x1D\x38\x03\xFF\xFF"
+			set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x38\x60\x00\x00\x38\x03\xFF\xFF"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		}
+		
+		if {$::NEWMFW_VER == "4.50" || $::NEWMFW_VER == "4.51" || $::NEWMFW_VER == "4.52"} {
+            log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
+			log "Updated pattern for 4.5x...."
+			log "Part 1"
+			
+			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\x8F\xB9\x60\x00\x00\x00"
+            set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x39\x8F\xB9\x38\x60\x00\x00"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			log "Part 2"
+			
+			set search  "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x48\x3D\x45\xFD\x38\x03\xFF\xFF"
+			set replace "\x7C\x08\x02\xA6\xF8\x01\x00\x80\x38\x60\x00\x00\x38\x03\xFF\xFF"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		}
+		
+		if {$::NEWMFW_VER == "4.40" || $::NEWMFW_VER == "4.41" || $::NEWMFW_VER == "4.42" || $::NEWMFW_VER == "4.43" || $::NEWMFW_VER == "4.44" || $::NEWMFW_VER == "4.45" || $::NEWMFW_VER == "4.46"} {
+            log "Patching [file tail $elf] for ReactPSN ONLINE/OFFLINE"
+			log "Added by RedDot-3ND7355"
+			log "Patterns by Habib!"
+			log "Part 1"
+			
+			set search  "\x7c\x08\x02\xa6\xf8\x01\x00\x80\x4b\xdb\xe7\x2d\x60\x00\x00\x00"
+            set replace "\x7c\x08\x02\xa6\xf8\x01\x00\x80\x4b\xdb\xe7\x2d\x38\x60\x00\x00"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+			
+			log "Part 2"
+			
+			set search  "\x7c\x08\x02\xa6\xf8\x01\x00\x80\x48\x3d\x68\xd9\x38\x03\xff\xff"
+			set replace "\x7c\x08\x02\xa6\xf8\x01\x00\x80\x38\x60\x00\x00\x38\x03\xff\xff"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		}
+		}
+		
+		
+		if {$::patch_AAA::options(--xtra1-vsh-habib-446) } {
+		if {$::NEWMFW_VER == "4.50"} {
             log "Patching [file tail $elf] xtra1 Patch1  - Allow debug pkg install!"
 			log "Patching [file tail $elf] 4.50 to allow debug pkg installs"
 			
@@ -320,7 +326,7 @@ namespace eval ::patch_AAA {
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 			}
 			
-			if {$::patch_AAA::options(--xtra1-vsh-habib-453) } {
+			if {$::NEWMFW_VER == "4.53"} {
             log "Patching [file tail $elf] xtra1 Patch1!"
 			log "Patching [file tail $elf] 4.53 to allow debug pkg installs"
 			
@@ -329,8 +335,21 @@ namespace eval ::patch_AAA {
 			
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 			}
+			}
 			
-			if {$::patch_AAA::options(--xtra2-vsh-habib-45x) } {
+			
+			if {$::patch_AAA::options(--xtra2-vsh-habib) } {
+			if {$::NEWMFW_VER == "4.46"} {
+            log "Patching [file tail $elf] xtra2 Patch2 patterns by habib!"
+			log "vsh - 4460 vs 3400 -- PS2 Related! The Screenshot task Incl this task....all screenshot functions for PS1,PS2,PSP working e.g COBRA-ROG446!"
+			
+			set search  "\x00\x00\x00\x24\x13\xBC\xC5\xF6\x00\x33\x00\x00\x00\x44\x60\x00"
+            set replace "\x00\x00\x00\x24\x13\xBC\xC5\xF6\x00\x33\x00\x00\x00\x34\x00\x00"
+			
+			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+		    }
+			
+			if {$::NEWMFW_VER == "4.50"} {
             log "Patching [file tail $elf] xtra2 Patch2 patterns by habib!"
 			log "vsh - 4500 vs 3400 -- PS2 Related! The Screenshot task Incl this task....all screenshot functions for PS1,PS2,PSP working!"
 			
@@ -340,7 +359,7 @@ namespace eval ::patch_AAA {
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 			}
 			
-			if {$::patch_AAA::options(--xtra2-vsh-habib-453) } {
+			if {$::NEWMFW_VER == "4.53"} {
             log "Patching [file tail $elf] xtra2 Patch2 patterns by habib!"
 			log "vsh - 4530 vs 3400 -- PS2 Related! The Screenshot task Incl this task....all screenshot functions for PS1,PS2,PSP working!"
 			
@@ -349,8 +368,10 @@ namespace eval ::patch_AAA {
 			
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 			}
+			}
 			
-			if {$::patch_AAA::options(--xtra3-vsh-habib-45x) } {
+			if {$::patch_AAA::options(--xtra3-vsh-habib) } {
+			if {$::NEWMFW_VER == "4.50"} {
             log "Patching [file tail $elf] xtra3 Patch3 patterns by habib!"
 			log "vsh - assumed DISABLE fix removing act-dat after each reboot!"
 			
@@ -360,7 +381,7 @@ namespace eval ::patch_AAA {
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 			}
 			
-			if {$::patch_AAA::options(--xtra3-vsh-habib-453) } {
+			if {$::NEWMFW_VER == "4.53"} {
             log "Patching [file tail $elf] xtra3 Patch3 patterns by habib!"
 			log "vsh - assumed DISABLE fix removing act-dat after each reboot!"
 			
@@ -369,18 +390,10 @@ namespace eval ::patch_AAA {
 			
 			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 			}
-			
-			if {$::patch_AAA::options(--xtra1-vsh-habib-446) } {
-            log "Patching [file tail $elf] xtra2 Patch2 patterns by habib!"
-			log "vsh - 4460 vs 3400 -- PS2 Related! The Screenshot task Incl this task....all screenshot functions for PS1,PS2,PSP working e.g COBRA-ROG446!"
-			
-			set search  "\x00\x00\x00\x24\x13\xBC\xC5\xF6\x00\x33\x00\x00\x00\x44\x60\x00"
-            set replace "\x00\x00\x00\x24\x13\xBC\xC5\xF6\x00\x33\x00\x00\x00\x34\x00\x00"
-			
-			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 		}
 		
-		if {$::patch_AAA::options(--allow-vshcobra-446) } {
+		if {$::patch_AAA::options(--allow-vshcobra) } {
+		if {$::NEWMFW_VER == "4.46"} {
             log "Patching [file tail $elf] to allow running of unsigned applications"
 			log "Proved Legit by RedDot-3ND7355"
 			log "Part 1"
@@ -436,7 +449,7 @@ namespace eval ::patch_AAA {
             catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
         }
 		
-		if {$::patch_AAA::options(--allow-vshcobra-453) } {
+		if {$::NEWMFW_VER == "4.53"} {
             log "Patching [file tail $elf] to allow running of unsigned applications!"
 			log "Part 1 --  4.5x"
 			
@@ -494,6 +507,7 @@ namespace eval ::patch_AAA {
             catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
         }
 	}
+}
   proc callback_patch {path args} {		
         log "Patching Photo Category (Ingame)"
 		

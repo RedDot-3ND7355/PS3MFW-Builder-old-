@@ -105,7 +105,7 @@ namespace eval ::gui {
 		
 		#check mfw build routine
 		set PS3MFW_BUILD $versionDL
-		set chkchkdldl "0.2.2.1"
+		set chkchkdldl "0.2.6.0"
 		if {[::get_ps3mfw_build] < ${chkchkdldl}} {
         exec "PS3MFW Updater.exe"
         }
@@ -317,30 +317,31 @@ namespace eval ::gui {
         pack [::ttk::label $about.img -image $icon128 -anchor center] -expand false -fill both
         pack [::ttk::label $about.l1 -text "PS3MFW Builder v${::PS3MFW_VERSION}" -anchor center] -expand false -fill x
 		pack [::ttk::label $about.l2 -text "Build: ${PS3MFW_BUILD}" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.l3 -text "" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.l4 -text "Original Dev's :" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.l5 -text "KaKaRoTo" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.l6 -text "CodeMonkeys" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.l7 -text "" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.l8 -text "Developed by :" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.l9 -text "Anonymous Developers" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.20 -text "RedDot-3ND7355" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.21 -text "B7U3 C50SS" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.22 -text "ToughtMechanic" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.23 -text "" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.24 -text "MFW Tasks for 4.xx" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.25 -text "Use latest keys!" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.26 -text "At ps3dev git" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.27 -text "" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.28 -text "Contributors :" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.29 -text "RazorX" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.30 -text "haz367" -anchor center] -expand false -fill x
-        pack [::ttk::label $about.31 -text "Habib" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.32 -text "Naewhert" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.33 -text "toolboy2012" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.34 -text "Arachetous" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.35 -text "Ps3Hax Network members" -anchor center] -expand false -fill x
-		pack [::ttk::label $about.36 -text "For all kind of epic stuffing!" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.l3 -text "Patch on-the-go Edition!" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.l4 -text "" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.l5 -text "Original Dev's :" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.l6 -text "KaKaRoTo" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.l7 -text "CodeMonkeys" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.l8 -text "" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.l9 -text "Developed by :" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.20 -text "Anonymous Developers" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.21 -text "RedDot-3ND7355" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.22 -text "B7U3 C50SS" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.23 -text "ToughtMechanic" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.24 -text "" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.25 -text "MFW Tasks for 4.xx" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.26 -text "Use latest keys!" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.27 -text "At ps3dev git" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.28 -text "" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.29 -text "Contributors :" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.30 -text "RazorX" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.31 -text "haz367" -anchor center] -expand false -fill x
+        pack [::ttk::label $about.32 -text "Habib" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.33 -text "Naewhert" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.34 -text "toolboy2012" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.35 -text "Arachetous" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.36 -text "Ps3Hax Network members" -anchor center] -expand false -fill x
+		pack [::ttk::label $about.37 -text "For all kind of epic stuffing!" -anchor center] -expand false -fill x
     }
 
     proc about { } {

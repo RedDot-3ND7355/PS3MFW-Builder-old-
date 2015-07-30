@@ -13,11 +13,10 @@
 # Priority: 3
 # Description: [4.xx] Patch lv1!
 
-# Option --label: How to use: If you turn on habib's patterns, plz turn off toolboy's patterns! And if you want toolboy than turn off habib!
-# Option --patch-lv1-features: [4.4x] Patch using habib's patterns! [Also used for Cobra!]
-# Option --patch-lv1-features-45x: [4.5x] Patch using habib's patterns! [Also used for Cobra!]
-# Option --patch-lv1-features-46x: [4.6x] Patch using Red's patterns! [Also used for Cobra!]
+# Option --label: How to use: If you turn on habib's patterns, plz turn off toolboy's patterns! And if you want toolboy then turn off habib's!
+# Option --patch-lv1-features: [4.xx] Patch using habib's patterns! [Also used for Cobra!]
 # Option --patch-lv1-otheros-450: [4.50] Patch using habib's patterns for otheros! (+ few miscs)
+# Option --patch-lv1-nobd: [4.5x|4.6x] Patch lv1 noBD Fix for CFW!
 # Option --patch-lv1-mmap: [4.xx] Mmap out lv1!
 # Option --patch-lv1-lpar: [4.xx] Patch lv1 to allow deleting/creating/modifying dir's!
 # Option --patch-lv1-ENCDEC: [4.xx] Patch lv1 for deleting ENCDEC!
@@ -34,9 +33,8 @@
 
 # Type --label: label
 # Type --patch-lv1-features: boolean
-# Type --patch-lv1-features-45x: boolean
-# Type --patch-lv1-features-46x: boolean
 # Type --patch-lv1-otheros-450: boolean
+# Type --patch-lv1-nobd: boolean
 # Type --patch-lv1-mmap: boolean
 # Type --patch-lv1-lpar: boolean
 # Type --patch-lv1-ENCDEC: boolean
@@ -55,10 +53,9 @@ namespace eval ::patch_lv1 {
 
     array set ::patch_lv1::options {
 	    --label ""
-        --patch-lv1-features false
-		--patch-lv1-features-45x false
-		--patch-lv1-features-46x true
+        --patch-lv1-features true
 		--patch-lv1-otheros-450 false
+		--patch-lv1-nobd false
 		--patch-lv1-mmap true
 		--patch-lv1-lpar false
 		--patch-lv1-ENCDEC false
@@ -93,8 +90,21 @@ namespace eval ::patch_lv1 {
 		}
 
     proc patch_elf {elf} {
-	if {$::patch_lv1::options(--patch-lv1-otheros-450)} {
 	
+	set ::SUF [::get_pup_version2 ${::ORIGINAL_VERSION_TXT}]	
+	if { [regexp "(^\[0-9]{1,2})\.(\[0-9]{1,2})(.*)" $::SUF all ::OFW_MAJOR_VER ::OFW_MINOR_VER SubVerInfo] } {		
+		set ::NEWMFW_VER [format "%.1d.%.2d" $::OFW_MAJOR_VER $::OFW_MINOR_VER]	
+		if { $SubVerInfo != "" } {
+			log "Getting pup version OK! var = ${::NEWMFW_VER} (subversion:$SubVerInfo)"
+		} else { 
+			log "Getting pup version OK! var = ${::NEWMFW_VER}"
+		}		
+	} else {
+		die "Getting pup version FAILED! Exiting!"
+	}
+	
+	if {$::NEWMFW_VER == "4.50" } {
+	if {$::patch_lv1::options(--patch-lv1-otheros-450)} {
 	        #Patch lv1 for otheros back to 4.xx!
 			log "Patching lv1 for otheros + miscs"
 			log "Patterns by habib!"
@@ -470,8 +480,11 @@ set replace "\x00\x00\x00\x00\x00\x02\xBB\xB0\x00\x00\x00\x00\x00\x00\x14\x50"
 catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 log "good grief, finally done patching!"
 	}
+} 
 
     if {$::patch_lv1::options(--patch-lv1-features)} {
+    if {$::NEWMFW_VER == "4.40" || $::NEWMFW_VER == "4.41" || $::NEWMFW_VER == "4.42" || $::NEWMFW_VER == "4.43" || $::NEWMFW_VER == "4.44" || $::NEWMFW_VER == "4.45" || $::NEWMFW_VER == "4.46" || $::NEWMFW_VER == "4.47" || $::NEWMFW_VER == "4.48" || $::NEWMFW_VER == "4.49"} {
+
      # Patch core OS Hash check core os // product mode always on
 	  log "Patch core OS Hash check core os for 4.xx // product mode always on"
       log "Fixed by RedDot-3ND7355 and HABIB"
@@ -504,7 +517,8 @@ log "good grief, finally done patching!"
             catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 	}
 	
-	if {$::patch_lv1::options(--patch-lv1-features-45x)} {
+	if {$::NEWMFW_VER == "4.50" || $::NEWMFW_VER == "4.51" || $::NEWMFW_VER == "4.52" || $::NEWMFW_VER == "4.53" || $::NEWMFW_VER == "4.54" || $::NEWMFW_VER == "4.55" || $::NEWMFW_VER == "4.56" || $::NEWMFW_VER == "4.57" || $::NEWMFW_VER == "4.58" || $::NEWMFW_VER == "4.59"} {
+
 	  log "Patch core OS Hash check core os for 4.5x"
       log "Fixed by RedDot-3ND7355 and HABIB"
 
@@ -538,7 +552,7 @@ log "good grief, finally done patching!"
             catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 	}
 	
-	if {$::patch_lv1::options(--patch-lv1-features-46x)} {
+    if {$::NEWMFW_VER == "4.60" || $::NEWMFW_VER == "4.61" || $::NEWMFW_VER == "4.62" || $::NEWMFW_VER == "4.63" || $::NEWMFW_VER == "4.64" || $::NEWMFW_VER == "4.65" || $::NEWMFW_VER == "4.66" || $::NEWMFW_VER == "4.67" || $::NEWMFW_VER == "4.68" || $::NEWMFW_VER == "4.69"} {
 	  log "Patch core OS Hash check core os for 4.6x"
       log "Added by RedDot-3ND7355"
 
@@ -571,7 +585,35 @@ log "good grief, finally done patching!"
 
             catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
 	}
+}
 
+      if {$::patch_lv1::options(--patch-lv1-nobd)} {
+        	
+        	        #Patch lv1 for PS3 and Broken BD Drives 4.xx!
+        			log "Patching lv1 noBD Fix for 4.5X and 4.6x CFW"
+        			log "Credits to MLT For the Original idea and 3.55 NObdemu-PUP Example, our sexy Zecoxao for finding Updated 4.xx patterns...!"
+        			log "Part 1"
+        			
+        	        set search "\x7D\x64\x5B\x78\x2C\xAB\x00\x41\xF8\x01\x00\x70\xF9\x21\x00\x78\x40\x9D\x00\x14"
+                        set replace "\x7D\x64\x5B\x78\x2C\xAB\x00\x41\xF8\x01\x00\x70\xF9\x21\x00\x78\x60\x00\x00\x00"
+        			
+        			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+        			
+        			log "Part 2"
+        			
+        		     set search "\x2F\xBF\x00\xA7\x41\x9E\x00\x0C\x2F\xBF\x00\xA5\x40\x9E\x00\x54"
+                             set replace "\x2F\xBF\x00\xA7\x41\x9E\x00\x0C\x2F\xBF\x00\xA5\x60\x00\x00\x00"
+        			
+        			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+        			
+        			log "Part 3"
+        			
+        			set search "\x78\x84\x00\x20\xF8\x01\x00\x70\xF9\x21\x00\x78\x40\x9E\x00\x0C"
+                                set replace "\x78\x84\x00\x20\xF8\x01\x00\x70\xF9\x21\x00\x78\x60\x00\x00\x00"
+        			catch_die {::patch_elf $elf $search 0 $replace} "Unable to patch self [file tail $elf]"
+        			}
+	  
+	  
 	  if {$::patch_lv1::options(--patch-lv1-inter-check)} {
       # Patching System Manager to disable integrity check
       log "Patching System Manager to disable integrity check"
